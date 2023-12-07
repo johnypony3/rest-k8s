@@ -1,0 +1,16 @@
+{
+  "name": "rest-k8s",
+  "version": "0.0.2",
+  "description": "the best rest-k8s. probably ever.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npm install",
+    "start": "npm run build && node index.js"
+  },
+  "author": "edward",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
