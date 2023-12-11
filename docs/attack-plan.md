@@ -8,7 +8,7 @@
 | Ready for review | **Build NodeJS API** ||
 | Ready for review | **Build docker container locally** ||
 || * Automate in github ||
-|| **Deploy first cluster in aws via terraform running locally** ||
+| Ready for review | **Deploy first cluster in aws via terraform running locally** ||
 || * Automate in github ||
 || **Deploy container** ||
 || * Automate in github ||
