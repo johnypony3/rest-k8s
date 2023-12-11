@@ -1,5 +1,5 @@
 resource "aws_eks_cluster" "rest-k8s" {
-  name     = local.workspace_name
+  name     = join(var.common_delimiter, ["eks", "cl", local.workspace_name])
   role_arn = aws_iam_role.rest-k8s.arn
 
   vpc_config {
@@ -14,7 +14,7 @@ resource "aws_eks_cluster" "rest-k8s" {
 
 resource "aws_eks_node_group" "rest-k8s" {
   cluster_name    = aws_eks_cluster.rest-k8s.name
-  node_group_name = local.workspace_name
+  node_group_name = join(var.common_delimiter, ["eks", "ng", local.workspace_name])
   node_role_arn   = aws_iam_role.rest-k8s-node.arn
   subnet_ids      = [for subnet in aws_subnet.rest-k8s : subnet.id]
 
