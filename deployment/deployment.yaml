@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: rest-k8s
+  labels:
+    app: rest-k8s
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: rest-k8s
+  template:
+    metadata:
+      labels:
+        app: rest-k8s
+    spec:
+      containers:
+      - name: rest-k8s
+        image: public.ecr.aws/y3y4h4q6/manual-01:0.0.4
+        ports:
+          - containerPort: 80

@@ -8,7 +8,7 @@ variable "common_delimiter" {
 variable "common_name" {
   description = "Name used for dynamic naming"
   type        = string
-  default     = "liatrio"
+  default     = "theemm"
 }
 
 #vpc/az/subnets
